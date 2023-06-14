@@ -221,4 +221,6 @@ require get_template_directory() . '/inc/custom_includes/custom_functions.php';
 
 require get_template_directory() . '/inc/custom_includes/custom_taxo.php';
 
+require get_template_directory() . '/inc/custom_includes/post-types.php';
+
 

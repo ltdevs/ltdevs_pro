@@ -22,50 +22,60 @@
             <div class="container">
 
                 <div class="footer-logo text-center">
-                    <img src="images/logo.png" class="attachment-large size-large" alt="">
+                    <img src="https://cp0.ltdevs.com/aurascape/wp-content/uploads/2023/06/logo-removebg-preview.png" class="" alt="" style="width: 300px;">
                 </div>
 
                 <div class="flex-col">
                     <div class="ft-col-contact text-center">
                         <div class="contact-info box-style2 text-light">
                             <div class="box-icon"><i class="flaticon-world"></i></div>
-                            <p>411 University St, Seattle, USA</p>
+                            <p>411 Street Name, Village, Georgetown</p>
                             <h6>Our Address</h6>                                            
                         </div>
                     </div>
                     <div class="ft-col-contact text-center border-left border-right">
                         <div class="contact-info box-style2 text-light">
                             <div class="box-icon"><i class="flaticon-note"></i></div>
-                            <p><a href="mailto:onum_company@mail.com">onum_company@mail.com</a></p>
-                            <h6>Our Mailbox</h6>                                            
+                            <p><a href="mailto: aurascapegy@gmail.com"> aurascapegy@gmail.com</a></p>
+                            <h6>Our Email</h6>                                            
                         </div>
                     </div>
                     <div class="ft-col-contact text-center">
                         <div class="contact-info box-style2 text-light">
                             <div class="box-icon"><i class="flaticon-viber"></i></div>
-                            <p><a href="tel:800-456-478-23">+1 -800-456-478-23</a></p>
+                            <p><a href="tel:592-650-1360">(+592)650-1360</a></p>
                             <h6>Our Phone</h6>                                          
                         </div>
                     </div>
                 </div>
-
-                <div class="footer-menu">
-                    <ul id="menu-footer-menu" class="menu">
-                        <li><a href="index.html" aria-current="page">Home</a></li>
-                        <li><a href="about-us.html">About</a></li>
-                        <li><a href="portfolio-grid.html">Portfolio</a></li>
-                        <li><a href="faqs.html">FAQs</a></li>
-                        <li><a href="contacts.html">Contacts</a></li>
-                    </ul>
-                </div>
-
-                <p class="copyright text-center">Copyright &copy; <?php echo $currentYear = date("Y"); ?> | <span>All rights reserved</span> | <span>Developed by <a href="https://www.ltdevs.com">レナ Devs </a></span></p>
+                
+                <?php wp_nav_menu(
+                        array(
+                            'theme_location' 	=> 'menu-2',
+                            'menu_id'        	=> 'primary-menu-right',
+                            'container'       	=> 'div',
+                            'container_class' 	=> 'footer-menu',
+                            'container_id'   	=> '',
+                            'menu_class'      	=> '',
+                            'menu_id'         	=> '',
+                            'echo'            	=> true,
+                            'before'          	=> '',
+                            'after'           	=> '',
+                            'link_before'     	=> '',
+                            'link_after'      	=> '',
+                            'items_wrap'      	=> '<ul id="menu-footer-menu" class="menu">%3$s</ul>',
+                            'depth'           	=> 0,
+                            'walker'          	=> ''
+                        )
+                    );
+                ?>
+                <p class="copyright text-center">Copyright &copy; <?php echo $currentYear = date("Y"); ?> | <span>All rights reserved</span> | <span>Developed by <a target="_blank" href="https://www.ltdevs.com">レナ Devs </a></span></p>
 
                 <div class="footer-social text-center">
-                    <a class="footer-social-icon twitter" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a class="footer-social-icon facebook" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a class="footer-social-icon linkedin" href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="footer-social-icon instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="footer-social-icon twitter" href="https://api.whatsapp.com/send?phone=%2B5926501360" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a class="footer-social-icon facebook" href="https://www.facebook.com/aurascape.gy" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="footer-social-icon linkedin" href="https://www.linkedin.com/in/aurascape-services-4a5824205/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="footer-social-icon instagram" href="https://www.instagram.com/aurascapegy/" target="_blank"><i class="fab fa-instagram"></i></a>
                 </div>
 
             </div>

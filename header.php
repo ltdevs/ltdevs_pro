@@ -37,7 +37,7 @@
                         </div>                        
                         <!-- contact info -->
                         <ul class="topbar-info clearfix">
-                            <li><i class="flaticon-placeholder"></i> (+592)650-1360 </li>
+                            <li><i class="flaticon-viber"></i> (+592) 650-1360 </li>
                             <li><i class="flaticon-envelope"></i> aurascapegy@gmail.com </li>
                         </ul>
                         <!-- contact info close -->    
@@ -112,7 +112,7 @@
 
                         <!-- logo mobile start -->
                         <div class="mobile_logo">
-                            <a href="index.html"><img src="images/logo-dark.svg" alt="Onum"></a>
+                            <?php the_custom_logo(); ?>
                         </div>
                         <!-- logo mobile end -->
 
@@ -198,8 +198,8 @@
                 <div class="container">
                     <div class="flex-row m-lr0">
                         <div class="home3-top-left align-self-center">
-                            <h6>change your view of SEO</h6>
-                            <h2>Ready to Be the First Page of Google?</h2>
+                            <h6>AuraScape</h6>
+                            <h2>Rendering Dreams to Reality</h2>
                             <p>We bet you don’t spend much time on the 2nd page of <br>Google – so why should your website?</p>
                             <div class="d-flex sm-justify-content-center">
                                 <div class="ot-button align-self-center">
