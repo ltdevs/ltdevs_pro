@@ -2701,7 +2701,7 @@ a:hover, a:active {
   border-bottom-color: transparent;
 }
 .site-header.header-overlay {
-  background: transparent;
+  /* background: transparent; */
   -webkit-box-shadow: 0px 0px 0px 0px rgba(42, 67, 113, 0.15);
   -moz-box-shadow: 0px 0px 0px 0px rgba(42, 67, 113, 0.15);
   box-shadow: 0px 0px 0px 0px rgba(42, 67, 113, 0.15);

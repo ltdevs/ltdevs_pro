@@ -9,23 +9,19 @@
 
 get_header();
 ?>
-		
-<div class="">
-	<h3>Ooops! Page Not Found!</h3>
-	<p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable..</p>
-	<ul>
-		<li>If you typed the page adress, make sure it is spelled correctly.</li>
-		<li>Click <a onclick="window.history.back()" href="javascript:void(0)">Back</a> button to try another link.</li>
-		<li>Or go back on <a href="<?php echo home_url()?>">Homepage</a> and try there.</li>		
-	</ul>
+
+<div class="container">
+	<div class="error-404 not-found text-center">
+		<h2>404 <img class="error-image" src="https://via.placeholder.com/260x260.png" alt="404"></h2>
+		<h1>Sorry! Page Not Found!</h1>
+		<div class="content-404">
+			<p>Oops! The page you are looking for does not exist. Please return to the site’s homepage.</p>
+			<a class="octf-btn octf-btn-third octf-btn-icon" href="<?php echo home_url()?>">Take Me Home<i class="flaticon-right-arrow-1"></i></a>
+			<a class="octf-btn octf-btn-third octf-btn-icon" onclick="window.history.back()" href="javascript:void(0)">Take Me Back<i class="flaticon-right-arrow-1"></i></a>
+		</div>
+	</div>
 </div>
-<div class="">
-	<ul>
-		<li><a onclick="window.history.back()" href="javascript:void(0)"><span>Go Back</span></a></li>
-		<?php print_r($_SERVER['HTTP_REFERER'])?>
-		<li><a href="<?php echo home_url()?>"><span>back To homepage</span></a></li>
-	</ul>
-</div>
+
 			
 <?php
 get_footer();

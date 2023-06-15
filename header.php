@@ -19,11 +19,11 @@
 
 	<?php wp_head(); ?>
 </head>
-
+<?php  global $post; ?>
 <body <?php body_class('royal_preloader'); ?>>
 <?php wp_body_open(); ?>
 	<div id="page" class="site">
-        <header id="site-header" class="site-header header-style-1 header-overlay header-fullwidth sticky-header">
+        <header id="site-header" class="site-header header-style-1 header-overlay header-fullwidth sticky-header <?php echo $post->post_name !=='home' ? 'bg-banner-gradient particles-js':''; ?>">
             <!-- Top bar start -->
             <div class="header-topbar">
                 <div class="octf-area-wrap">
@@ -152,10 +152,10 @@
 
         <div id="content" class="site-content">
 					
-<?php global $post;
+<?php
 	if ($post->post_name !=='home') { ?>
 		<!-- standard page banner -->
-			<div class="page-header dtable text-center" style="background-image: url(images/bg-page-header.jpg);">
+			<div class="page-header dtable text-center" style="background-image: url(https://cp0.ltdevs.com/aurascape/images/bg-page-header.jpg); margin-top: 150px;">
 					<div class="dcell">
 						<div class="container">
 							<h1 class="page-title"><?php 
