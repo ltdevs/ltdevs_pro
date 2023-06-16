@@ -147,13 +147,52 @@ function ltdevs_pro_scripts() {
 	 * custom styles enques
 	 */
 
-	wp_enqueue_style( 'ltdevs_pro-{file_name}',  get_template_directory_uri() . '/assets/css/{file_name}.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-bootstrap.min',  get_template_directory_uri() . '/assets/css/assets/bootstrap.min.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-font-awesome.min',  get_template_directory_uri() . '/assets/css/assets/font-awesome.min.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-flaticon',  get_template_directory_uri() . '/assets/css/assets/flaticon.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-magnific-popup',  get_template_directory_uri() . '/assets/css/assets/magnific-popup.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-owl.carousel',  get_template_directory_uri() . '/assets/css/assets/owl.carousel.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-owl.theme',  get_template_directory_uri() . '/assets/css/assets/owl.theme.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-animate',  get_template_directory_uri() . '/assets/css/assets/animate.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-slick',  get_template_directory_uri() . '/assets/css/assets/slick.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-preloader',  get_template_directory_uri() . '/assets/css/assets/preloader.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-revolution/layers',  get_template_directory_uri() . '/assets/css/assets/revolution/layers.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-revolution/navigation',  get_template_directory_uri() . '/assets/css/assets/revolution/navigation.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-revolution/settings',  get_template_directory_uri() . '/assets/css/assets/revolution/settings.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-meanmenu',  get_template_directory_uri() . '/assets/css/assets/meanmenu.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-style',  get_template_directory_uri() . '/assets/css/style.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-responsive',  get_template_directory_uri() . '/assets/css/responsive.css', array(), _S_VERSION );
 
 	/**
 	 * custom scripts enques
 	 */
 
-	wp_enqueue_script( 'ltdevs_pro-{file_name}', get_template_directory_uri() . '/assets/js/{file_name}.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-jquery-3.2.1.min', get_template_directory_uri() . '/assets/js/jquery-3.2.1.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-popper.min', get_template_directory_uri() . '/assets/js/popper.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-bootstrap.min', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), _S_VERSION, true ); 
+
+	wp_enqueue_script( 'ltdevs_pro-assets/revolution/jquery.themepunch.revolution.min', get_template_directory_uri() . '/assets/js/assets/revolution/jquery.themepunch.revolution.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-assets/revolution/jquery.themepunch.tools.min', get_template_directory_uri() . '/assets/js/assets/revolution/jquery.themepunch.tools.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-jquery.magnific-popup.min', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-owl.carousel.min', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-slick.min', get_template_directory_uri() . '/assets/js/slick.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-jquery.meanmenu.min', get_template_directory_uri() . '/assets/js/jquery.meanmenu.min.js', array(), _S_VERSION, true ); 
+
+	wp_enqueue_script( 'ltdevs_pro-waypoints.min', get_template_directory_uri() . '/assets/js/waypoints.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-jquery.counterup.min', get_template_directory_uri() . '/assets/js/jquery.counterup.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-wow.min', get_template_directory_uri() . '/assets/js/wow.min.js', array(), _S_VERSION, true ); 
+
+	wp_enqueue_script( 'ltdevs_pro-assets/revolution/extensions/revolution.extension.actions.min', get_template_directory_uri() . '/assets/js/assets/revolution/extensions/revolution.extension.actions.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-assets/revolution/extensions/revolution.extension.carousel.min', get_template_directory_uri() . '/assets/js/assets/revolution/extensions/revolution.extension.carousel.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-assets/revolution/extensions/revolution.extension.kenburn.min', get_template_directory_uri() . '/assets/js/assets/revolution/extensions/revolution.extension.kenburn.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-assets/revolution/extensions/revolution.extension.layeranimation.min', get_template_directory_uri() . '/assets/js/assets/revolution/extensions/revolution.extension.layeranimation.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-assets/revolution/extensions/revolution.extension.migration.min', get_template_directory_uri() . '/assets/js/assets/revolution/extensions/revolution.extension.migration.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-assets/revolution/extensions/revolution.extension.navigation.min', get_template_directory_uri() . '/assets/js/assets/revolution/extensions/revolution.extension.navigation.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-assets/revolution/extensions/revolution.extension.parallax.min', get_template_directory_uri() . '/assets/js/assets/revolution/extensions/revolution.extension.parallax.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-assets/revolution/extensions/revolution.extension.slideanims.min', get_template_directory_uri() . '/assets/js/assets/revolution/extensions/revolution.extension.slideanims.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-assets/revolution/extensions/revolution.extension.video.min', get_template_directory_uri() . '/assets/js/assets/revolution/extensions/revolution.extension.video.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-assets/revolution/revolution', get_template_directory_uri() . '/assets/js/assets/revolution/revolution.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-custom', get_template_directory_uri() . '/assets/js/custom.js', array(), _S_VERSION, true ); 
 
 
 	wp_enqueue_script( 'ltdevs_pro-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
@@ -201,5 +240,7 @@ if ( class_exists( 'WooCommerce' ) ) {
 require get_template_directory() . '/inc/custom_includes/custom_functions.php';
 
 require get_template_directory() . '/inc/custom_includes/custom_taxo.php';
+
+require get_template_directory() . '/inc/custom_includes/custom_posttypes.php';
 
 
