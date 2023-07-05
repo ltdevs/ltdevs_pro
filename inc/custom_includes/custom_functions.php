@@ -114,7 +114,7 @@ function restrict_custom_post_type_access() {
     }
 
 }
-add_action( 'template_redirect', 'restrict_custom_post_type_access' );
+// add_action( 'template_redirect', 'restrict_custom_post_type_access' );
 
 function custom_login_redirect( $redirect_to, $request, $user ) {
     // Redirect subscriber users to the homepage
@@ -123,12 +123,12 @@ function custom_login_redirect( $redirect_to, $request, $user ) {
     }
     return $redirect_to;
 }
-add_filter( 'login_redirect', 'custom_login_redirect', 10, 3 );
+// add_filter( 'login_redirect', 'custom_login_redirect', 10, 3 );
 
 function custom_login_logo() {
     echo '<style type="text/css">
         h1 a {
-            background-image: url() !important;
+            background-image: url(https://cp0.ltdevs.com/aurascape/wp-content/uploads/2023/06/AuraScape.LLogo-circle-e1687413363726.png) !important;
             background-size: contain !important;
             height: 150px !important;
             width: 150px !important;
@@ -158,5 +158,5 @@ function add_custom_link_to_admin_bar() {
     );
     $wp_admin_bar->add_node( $args );
 }
-add_action( 'admin_bar_menu', 'add_custom_link_to_admin_bar', 999 );
+// add_action( 'admin_bar_menu', 'add_custom_link_to_admin_bar', 999 );
 
