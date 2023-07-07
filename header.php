@@ -23,8 +23,7 @@
 <body <?php body_class('royal_preloader'); ?>>
 <?php wp_body_open(); ?>
 	<div id="page" class="site">
-        <!-- <header id="site-header" class="site-header header-style-1 header-overlay header-fullwidth sticky-header <?php echo $post->post_name !=='home' ? 'bg-banner-gradient particles-js':''; ?>"> -->
-        <header id="site-header" class="site-header header-style-1 header-overlay header-fullwidth sticky-header bg-banner-gradient particles-js">
+        <header id="site-header" class="site-header header-style-1 header-overlay header-fullwidth sticky-header <?php echo $post->post_name !=='home' ? 'bg-banner-gradient particles-js':''; ?>">
             <!-- Top bar start -->
             <div class="header-topbar">
                 <div class="octf-area-wrap">
@@ -213,7 +212,7 @@
                             </div>
                         </div>
                         <div class="home3-top-right">
-                            <img src="https://cp0.ltdevs.com/aurascape/wp-content/uploads/2023/07/Can_Mockup_3-e1688659847367-removebg-preview-e1688753726604.png" alt="Marketing Company">
+                            <img src="https://via.placeholder.com/900x635.png" alt="Marketing Company">
                         </div>
                     </div>
                 </div>
