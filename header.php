@@ -26,7 +26,7 @@
         <!-- <header id="site-header" class="site-header header-style-1 header-overlay header-fullwidth sticky-header <?php echo $post->post_name !=='home' ? 'bg-banner-gradient particles-js':''; ?>"> -->
         <header id="site-header" class="site-header header-style-1 header-overlay header-fullwidth sticky-header bg-banner-gradient particles-js">
             <!-- Top bar start -->
-            <div class="header-topbar">
+            <div class="header-topbar bg-banner-gradient">
                 <div class="octf-area-wrap">
                     <div class="container">             
                         <!-- Header Topbar Menus -->
@@ -49,7 +49,7 @@
 
             <!-- Main Header start -->
             <div class="octf-main-header">
-                <div class="octf-area-wrap">
+                <div class="octf-area-wrap bg-banner-gradient">
                     <div class="container-fluid octf-mainbar-container">
                         <div class="octf-mainbar">
                             <div class="octf-mainbar-row octf-row">
