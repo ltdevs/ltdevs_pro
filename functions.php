@@ -147,13 +147,36 @@ function ltdevs_pro_scripts() {
 	 * custom styles enques
 	 */
 
-	wp_enqueue_style( 'ltdevs_pro-{file_name}',  get_template_directory_uri() . '/assets/css/{file_name}.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-bootstrap.min',  get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-animate.min',  get_template_directory_uri() . '/assets/css/animate.min.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-magnific-popup',  get_template_directory_uri() . '/assets/css/magnific-popup.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-fontawesome-all.min',  get_template_directory_uri() . '/assets/css/fontawesome-all.min.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-flaticon',  get_template_directory_uri() . '/assets/css/flaticon.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-odometer',  get_template_directory_uri() . '/assets/css/odometer.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-jquery-ui',  get_template_directory_uri() . '/assets/css/jquery-ui.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-slick',  get_template_directory_uri() . '/assets/css/slick.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-default',  get_template_directory_uri() . '/assets/css/default.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-style',  get_template_directory_uri() . '/assets/css/style.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-responsive',  get_template_directory_uri() . '/assets/css/responsive.css', array(), _S_VERSION );
 
 	/**
 	 * custom scripts enques
 	 */
 
-	wp_enqueue_script( 'ltdevs_pro-{file_name}', get_template_directory_uri() . '/assets/js/{file_name}.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-jquery-3.6.0.min', get_template_directory_uri() . '/assets/js/vendor/jquery-3.6.0.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-bootstrap.min', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-imagesloaded.pkgd.min', get_template_directory_uri() . '/assets/js/imagesloaded.pkgd.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-jquery.countdown.min', get_template_directory_uri() . '/assets/js/jquery.countdown.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-jquery.magnific-popup.min', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-jquery.odometer.min', get_template_directory_uri() . '/assets/js/jquery.odometer.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-jquery.appear', get_template_directory_uri() . '/assets/js/jquery.appear.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-tween-max.min', get_template_directory_uri() . '/assets/js/tween-max.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-slick.min', get_template_directory_uri() . '/assets/js/slick.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-slick-animation.min', get_template_directory_uri() . '/assets/js/slick-animation.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-jquery-ui.min', get_template_directory_uri() . '/assets/js/jquery-ui.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-ajax-form', get_template_directory_uri() . '/assets/js/ajax-form.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-wow.min', get_template_directory_uri() . '/assets/js/wow.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-main', get_template_directory_uri() . '/assets/js/main.js', array(), _S_VERSION, true ); 
 
 
 	wp_enqueue_script( 'ltdevs_pro-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
