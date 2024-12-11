@@ -9,7 +9,7 @@
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', time() );
+	define( '_S_VERSION', '1.0.0' );
 }
 
 /**
@@ -49,8 +49,7 @@ function ltdevs_pro_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary-Left', 'ltdevs_pro' ),
-			'menu-2' => esc_html__( 'Primary-Right', 'ltdevs_pro' ),
+			'menu-1' => esc_html__( 'Primary', 'ltdevs_pro' ),
 		)
 	);
 
@@ -139,22 +138,8 @@ add_action( 'widgets_init', 'ltdevs_pro_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ltdevs_pro_scripts() {
-	// wp_enqueue_style( 'ltdevs_pro-style', get_stylesheet_uri(), array(), _S_VERSION );
-	// wp_style_add_data( 'ltdevs_pro-style', 'rtl', 'replace' );
-
-
-	/**
-	 * custom styles enques
-	 */
-
-	wp_enqueue_style( 'ltdevs_pro-{file_name}',  get_template_directory_uri() . '/assets/css/{file_name}.css', array(), _S_VERSION );
-
-	/**
-	 * custom scripts enques
-	 */
-
-	wp_enqueue_script( 'ltdevs_pro-{file_name}', get_template_directory_uri() . '/assets/js/{file_name}.js', array(), _S_VERSION, true ); 
-
+	wp_enqueue_style( 'ltdevs_pro-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_style_add_data( 'ltdevs_pro-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'ltdevs_pro-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
@@ -197,9 +182,3 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
-
-require get_template_directory() . '/inc/custom_includes/custom_functions.php';
-
-require get_template_directory() . '/inc/custom_includes/custom_taxo.php';
-
-

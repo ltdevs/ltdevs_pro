@@ -22,47 +22,38 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'ltdevs_pro' ); ?></a>
 
+	<header id="masthead" class="site-header">
+		<div class="site-branding">
+			<?php
+			the_custom_logo();
+			if ( is_front_page() && is_home() ) :
+				?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<?php
+			else :
+				?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<?php
+			endif;
+			$ltdevs_pro_description = get_bloginfo( 'description', 'display' );
+			if ( $ltdevs_pro_description || is_customize_preview() ) :
+				?>
+				<p class="site-description"><?php echo $ltdevs_pro_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+			<?php endif; ?>
+		</div><!-- .site-branding -->
 
-<?php wp_nav_menu(
-		array(
-			'theme_location' 	=> 'menu-1',
-			'menu_id'        	=> 'primary-menu-left',
-			'container'       	=> 'div',
-			'container_class' 	=> 'navbar-collapse collapse',
-			'container_id'   	=> 'navbar-collapse-1',
-			'menu_class'      	=> '',
-			'menu_id'         	=> '',
-			'echo'            	=> true,
-			'before'          	=> '',
-			'after'           	=> '',
-			'link_before'     	=> '',
-			'link_after'      	=> '',
-			'items_wrap'      	=> '<ul class="nav navbar-nav">%3$s</ul>',
-			'depth'           	=> 0,
-			'walker'          	=> ''
-		)
-	);
-?>
-						
-<?php the_custom_logo(); ?>
-					
-<?php global $post;
-	if ($post->post_name !=='home') { ?>
-		<!-- standard page banner -->
-		<div>
-			<h1><?php 
-			if ($post->post_type == '' ){ 
-				echo $post->post_type . 's'; 
-			} else {
-				echo $post->post_name; 
-			} ?> </h1> 
-		</div>
-		<div class="breadcrumb">
-			<?php custom_breadcrumbs(); ?>
-		</div>      
-					
-	<?php } else { ?>
-		<!-- home page banner -->
-<?php } ?>
-	
+		<nav id="site-navigation" class="main-navigation">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ltdevs_pro' ); ?></button>
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				)
+			);
+			?>
+		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->

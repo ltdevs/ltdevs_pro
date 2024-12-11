@@ -10,19 +10,23 @@
  */
 
 ?>
-		
-<footer>
-    <div class="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>Copyright &copy; <?php echo $currentYear = date("Y"); ?> | <span>All rights reserved</span> | <span>Developed by <a href="https://www.ltdevs.com">レナ Devs </a></span></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
 
+	<footer id="colophon" class="site-footer">
+		<div class="site-info">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ltdevs_pro' ) ); ?>">
+				<?php
+				/* translators: %s: CMS name, i.e. WordPress. */
+				printf( esc_html__( 'Proudly powered by %s', 'ltdevs_pro' ), 'WordPress' );
+				?>
+			</a>
+			<span class="sep"> | </span>
+				<?php
+				/* translators: 1: Theme name, 2: Theme author. */
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'ltdevs_pro' ), 'ltdevs_pro', '<a href="http://ltdevs.com">レナ Devs</a>' );
+				?>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
 
 <?php wp_footer(); ?>
 

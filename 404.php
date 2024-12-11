@@ -9,23 +9,52 @@
 
 get_header();
 ?>
-		
-<div class="">
-	<h3>Ooops! Page Not Found!</h3>
-	<p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable..</p>
-	<ul>
-		<li>If you typed the page adress, make sure it is spelled correctly.</li>
-		<li>Click <a onclick="window.history.back()" href="javascript:void(0)">Back</a> button to try another link.</li>
-		<li>Or go back on <a href="<?php echo home_url()?>">Homepage</a> and try there.</li>		
-	</ul>
-</div>
-<div class="">
-	<ul>
-		<li><a onclick="window.history.back()" href="javascript:void(0)"><span>Go Back</span></a></li>
-		<?php print_r($_SERVER['HTTP_REFERER'])?>
-		<li><a href="<?php echo home_url()?>"><span>back To homepage</span></a></li>
-	</ul>
-</div>
-			
+
+	<main id="primary" class="site-main">
+
+		<section class="error-404 not-found">
+			<header class="page-header">
+				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'ltdevs_pro' ); ?></h1>
+			</header><!-- .page-header -->
+
+			<div class="page-content">
+				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'ltdevs_pro' ); ?></p>
+
+					<?php
+					get_search_form();
+
+					the_widget( 'WP_Widget_Recent_Posts' );
+					?>
+
+					<div class="widget widget_categories">
+						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'ltdevs_pro' ); ?></h2>
+						<ul>
+							<?php
+							wp_list_categories(
+								array(
+									'orderby'    => 'count',
+									'order'      => 'DESC',
+									'show_count' => 1,
+									'title_li'   => '',
+									'number'     => 10,
+								)
+							);
+							?>
+						</ul>
+					</div><!-- .widget -->
+
+					<?php
+					/* translators: %1$s: smiley */
+					$ltdevs_pro_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'ltdevs_pro' ), convert_smilies( ':)' ) ) . '</p>';
+					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$ltdevs_pro_archive_content" );
+
+					the_widget( 'WP_Widget_Tag_Cloud' );
+					?>
+
+			</div><!-- .page-content -->
+		</section><!-- .error-404 -->
+
+	</main><!-- #main -->
+
 <?php
 get_footer();
