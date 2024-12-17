@@ -49,7 +49,8 @@ function ltdevs_pro_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'ltdevs_pro' ),
+			'menu-1' => esc_html__( 'Primary-Left', 'ltdevs_pro' ),
+			'menu-2' => esc_html__( 'Primary-Right', 'ltdevs_pro' ),
 		)
 	);
 
@@ -138,8 +139,42 @@ add_action( 'widgets_init', 'ltdevs_pro_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ltdevs_pro_scripts() {
-	wp_enqueue_style( 'ltdevs_pro-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'ltdevs_pro-style', 'rtl', 'replace' );
+	// wp_enqueue_style( 'ltdevs_pro-style', get_stylesheet_uri(), array(), _S_VERSION );
+	// wp_style_add_data( 'ltdevs_pro-style', 'rtl', 'replace' );
+
+	
+	/**
+	 * custom styles enques
+	 */
+	wp_enqueue_style( 'ltdevs_pro-bootstrap.min',  get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-main',  get_template_directory_uri() . '/assets/css/main.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-style',  get_template_directory_uri() . '/assets/css/style.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-responsive',  get_template_directory_uri() . '/assets/css/responsive.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-animate',  get_template_directory_uri() . '/assets/css/animate.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-font-awesome',  get_template_directory_uri() . '/assets/css/font-awesome.min.css', array(), _S_VERSION );
+	wp_enqueue_style( 'ltdevs_pro-ionicons.min',  get_template_directory_uri() . '/assets/css/ionicons.min.css', array(), _S_VERSION );
+
+	/**
+	 * custom scripts enques
+	 */
+
+	wp_enqueue_script( 'ltdevs_pro-jquery-1.11.0.min', get_template_directory_uri() . '/assets/js/jquery-1.11.0.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-bootstrap.min', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-own-menu', get_template_directory_uri() . '/assets/js/own-menu.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-owl.carousel.min', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-jquery.superslides', get_template_directory_uri() . '/assets/js/jquery.superslides.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-masonry.pkgd.min', get_template_directory_uri() . '/assets/js/masonry.pkgd.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-jquery.stellar.min', get_template_directory_uri() . '/assets/js/jquery.stellar.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-jquery-ui-1.10.3.custom', get_template_directory_uri() . '/assets/js/jquery-ui-1.10.3.custom.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-jquery.magnific-popup.min', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-jquery.isotope.min', get_template_directory_uri() . '/assets/js/jquery.isotope.min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-jquery.flexslider-min', get_template_directory_uri() . '/assets/js/jquery.flexslider-min.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-appointment', get_template_directory_uri() . '/assets/js/appointment.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-jquery.downCount', get_template_directory_uri() . '/assets/js/jquery.downCount.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-counter', get_template_directory_uri() . '/assets/js/counter.js', array(), _S_VERSION, true ); 
+	wp_enqueue_script( 'ltdevs_pro-main', get_template_directory_uri() . '/assets/js/main.js', array(), _S_VERSION, true ); 
+	// wp_enqueue_script( 'ltdevs_pro-{file-name}', get_template_directory_uri() . '/assets/js/{file-name}.js', array(), _S_VERSION, true ); 
+
 
 	wp_enqueue_script( 'ltdevs_pro-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
@@ -182,3 +217,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+
+require get_template_directory() . '/inc/custom_includes/custom_functions.php';
+
+require get_template_directory() . '/inc/custom_includes/custom_taxo.php';

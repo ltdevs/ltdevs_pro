@@ -25,7 +25,7 @@ add_action( 'pre_get_posts', 'runPosts' );
 
 function custom_breadcrumbs() {
 	global $post; 
-    echo '<ul>';
+    echo '<ol class="breadcrumb">';
     if (!is_home()) {
         echo '<li><a href="' . get_home_url() . '">Home</a></li>';
 
@@ -67,7 +67,7 @@ function custom_breadcrumbs() {
 			echo '<li> 404 Not Found </li>';
 		}
     }
-    echo '</ul>';
+    echo '</ol>';
 }
 
 function custom_queries($custom_posttype, $post_per_page, $section_location) {
@@ -114,7 +114,7 @@ function restrict_custom_post_type_access() {
     }
 
 }
-add_action( 'template_redirect', 'restrict_custom_post_type_access' );
+// add_action( 'template_redirect', 'restrict_custom_post_type_access' );
 
 function custom_login_redirect( $redirect_to, $request, $user ) {
     // Redirect subscriber users to the homepage
@@ -123,7 +123,7 @@ function custom_login_redirect( $redirect_to, $request, $user ) {
     }
     return $redirect_to;
 }
-add_filter( 'login_redirect', 'custom_login_redirect', 10, 3 );
+// add_filter( 'login_redirect', 'custom_login_redirect', 10, 3 );
 
 function custom_login_logo() {
     echo '<style type="text/css">
@@ -158,5 +158,5 @@ function add_custom_link_to_admin_bar() {
     );
     $wp_admin_bar->add_node( $args );
 }
-add_action( 'admin_bar_menu', 'add_custom_link_to_admin_bar', 999 );
+// add_action( 'admin_bar_menu', 'add_custom_link_to_admin_bar', 999 );
 
